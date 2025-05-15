@@ -1,14 +1,20 @@
-# Práctica de Docker: PHP y Apache
+# Practica Docker - PHP
 
 ## Imagen 1: PHP puro
-
-Se parte de la imagen oficial de PHP y se copia una aplicación sencilla (`index.php`) que se ejecuta con el servidor embebido.
+- Basado en php:8.2-cli
+- Usa servidor embebido de PHP
 
 ## Imagen 2: Ubuntu + Apache + PHP
-
-Se parte de una imagen de Ubuntu, se instala Apache y PHP, y se clona una aplicación PHP sencilla desde GitHub.
+- Basado en Ubuntu 22.04
+- Instala Apache2 y PHP
+- Clona app sencilla desde GitHub
 
 ## Contenedores
+- Imagen 1 probado en puerto 8080
+- Imagen 2 probado en puerto 8081
+- 20 contenedores de la imagen 2 mapeados de 8001 a 8020
 
-Se han creado contenedores desde ambas imágenes y se ha probado su funcionamiento accediendo vía navegador. Además, se han levantado 20 contenedores desde la segunda imagen en puertos distintos.
+## Scripts
+- `lanzar.sh`: lanza 20 contenedores
+- `borrar.sh`: los elimina
 
